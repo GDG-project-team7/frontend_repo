@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:src="@drawable/hiddenplace_logo"
+                android:layout_marginLeft="20dp">
+            </ImageView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:gravity="start|center_vertical"
+                android:padding="0dp"
+                android:textSize="14sp"
+                android:text="가이드 찾기">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:padding="0dp"
+                android:text="회원가입 / 로그인"
+                android:textSize="14sp"
+                android:gravity="end|center_vertical"
+                android:layout_marginEnd="17dp">
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로컬의 선택, 진짜를 경험하다"
+            android:textSize="17sp"
+            android:layout_marginTop="18dp"
+            android:layout_gravity="center"
+            android:textStyle="bold">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/hiddenplace_mainsearch">
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="70dp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/hiddenplace_homebutton">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/hiddenplace_eatbutton"></ImageView>
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/hiddenplace_homebutton">
+            </ImageView>
+            <ImageView
+                android:layout_marginRight="70dp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/hiddenplace_homebutton">
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_marginLeft="70dp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="여행"
+                android:textSize="13sp"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:textSize="13sp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="맛집"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:textSize="13sp"
+                android:layout_marginRight="10dp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="포토스팟"
+                android:gravity="center">
+            </TextView>
+            <TextView
+                android:textSize="13sp"
+                android:layout_marginRight="70dp"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="지도"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="히플 인기 관광지"
+            android:textStyle="bold">
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:contentDescription="히플 인기 관광지 이미지 1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hiddenplace_show">
+                </ImageView>
+                <ImageView
+                    android:contentDescription="히플 인기 관광지 이미지 2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hiddenplace_show">
+                </ImageView>
+                <ImageView
+                    android:contentDescription="히플 인기 관광지 이미지 3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hiddenplace_show">
+                </ImageView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="히플 인기 포트폴리오"
+            android:textStyle="bold">
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:contentDescription="히플 인기 포폴 이미지 1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hiddenplace_show">
+                </ImageView>
+                <ImageView
+                    android:contentDescription="히플 인기 포폴 이미지 2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hiddenplace_show">
+                </ImageView>
+                <ImageView
+                    android:contentDescription="히플 인기 포폴 이미지 3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hiddenplace_show">
+                </ImageView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="히플 BEST 3 가이드"
+            android:textStyle="bold">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/hiddenplace_guideshow"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/hiddenplace_guideshow"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/hiddenplace_guideshow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
