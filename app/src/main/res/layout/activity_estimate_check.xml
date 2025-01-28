@@ -107,6 +107,7 @@
         app:layout_constraintVertical_bias="0.222" />
 
     <Button
+        android:id="@+id/acceptance_button"
         android:layout_width="50dp"
         android:layout_height="30dp"
         android:background="@drawable/background_radius_mint"
@@ -119,6 +120,7 @@
         app:layout_constraintVertical_bias="0.881" />
 
     <Button
+        android:id="@+id/rejection_button"
         android:layout_width="50dp"
         android:layout_height="30dp"
         android:background="@drawable/background_radius_mint"
