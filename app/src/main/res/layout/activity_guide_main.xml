@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".guide.guide_main"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="130dp"
+            android:src="@drawable/hiddenplace_logo">
+        </ImageView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            android:layout_marginLeft="60dp"
+            android:background="@null">
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OOO"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="2dp"
+            android:textSize="15sp"
+            android:text="가이드님,">
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가이드님만 아는 비밀스러운 장소로 안내해주세요!"
+        android:layout_marginLeft="30dp"
+        android:textSize="15sp">
+    </TextView>
+
+    <Button
+        android:id="@+id/newEstimateButton"
+        android:layout_marginTop="50dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:layout_marginLeft="110dp"
+        android:text="가이드를 찾고 있어요!\n새로 들어온 견적서(o개)">
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가이드 프로필"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp">
+    </TextView>
+    
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:background="#F0F2F0"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/hiddenplace_guideshow"
+                android:layout_marginLeft="15dp">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가이드 이름"
+                    android:layout_marginTop="20dp"
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="담당 지역"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가이드 횟수"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="작성한 자기 소개"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:text="나의 포트폴리오"/>
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:text="포트폴리오 작성"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메인 페이지로 이동"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="280dp">
+    </TextView>
+
+</LinearLayout>
