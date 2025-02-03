@@ -9,7 +9,7 @@
     tools:context=".guide.chatting_guide">
 
     <ImageView
-        android:layout_width="150dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginLeft="130dp"
         android:src="@drawable/hiddenplace_logo">

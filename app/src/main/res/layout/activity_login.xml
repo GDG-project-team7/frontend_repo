@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.LoginActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage22"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hiddenplace_page_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:src="@drawable/hiddenplace_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.08"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.3"/>
+
+    <ImageView
+        android:id="@+id/idArea"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:src="@drawable/hiddenplace_idpw_area"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="아이디 입력"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/idArea"
+        app:layout_constraintTop_toTopOf="@id/idArea"
+        app:layout_constraintEnd_toEndOf="@id/idArea"
+        app:layout_constraintBottom_toBottomOf="@id/idArea"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.3"/>
+
+    <ImageView
+        android:id="@+id/pwArea"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:src="@drawable/hiddenplace_idpw_area"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="비밀번호 입력"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/pwArea"
+        app:layout_constraintTop_toTopOf="@id/pwArea"
+        app:layout_constraintEnd_toEndOf="@id/pwArea"
+        app:layout_constraintBottom_toBottomOf="@id/pwArea"/>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:background="@drawable/hiddenplace_button_mint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="login"
+        android:text="로그인"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기"
+            android:textSize="13sp"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:textSize="13sp"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <Button
+        android:contentDescription="sociallogin"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:background="@drawable/hiddenplace_sociallogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:id="@+id/sociallogin"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sociallogin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계정이 없으신가요?"
+            android:textSize="13sp"/>
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:background="@android:color/transparent"
+            android:textSize="13sp"
+            android:contentDescription="signin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="하러 가기"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
