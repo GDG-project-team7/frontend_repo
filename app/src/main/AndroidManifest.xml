@@ -13,6 +13,21 @@
         android:theme="@style/Theme.HiddenPlace"
         tools:targetApi="31">
         <activity
+
+            android:name=".auth.FindIDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.SendPortfolioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.EstimateRejectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guest.EstimateWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.EstimateCheckActivity"
+
             android:name=".auth.JoinActivity"
             android:exported="false" />
         <activity
@@ -29,6 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".guide.guide_main"
+
             android:exported="false" />
         <activity
             android:name=".MainActivity"
