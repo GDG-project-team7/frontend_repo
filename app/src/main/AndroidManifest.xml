@@ -27,7 +27,9 @@
             android:exported="false" />
         <activity
             android:name=".guide.EstimateCheckActivity"
+            android:exported="false" />
 
+        <activity
             android:name=".auth.JoinActivity"
             android:exported="false" />
         <activity
