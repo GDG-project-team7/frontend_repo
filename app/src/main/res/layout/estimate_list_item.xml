@@ -11,6 +11,7 @@
 
 
         <ImageView
+            android:id="@+id/ivEdit"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:src="@drawable/hiddenplace_guide_list_item_show"
@@ -24,6 +25,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OOO여행자"
@@ -34,6 +36,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/tvRegion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="지역"

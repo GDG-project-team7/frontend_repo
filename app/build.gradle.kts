@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.hiddenplace"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.hiddenplace"
