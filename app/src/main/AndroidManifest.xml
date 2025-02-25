@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,40 +13,61 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HiddenPlace"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-
+            android:name=".guest.SelectGuideActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.FindIDActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.SendPortfolioActivity"
+            android:name=".auth.FindPW1Activity"
             android:exported="false" />
         <activity
-            android:name=".guide.EstimateRejectionActivity"
+            android:name=".auth.FindPW2Activity"
             android:exported="false" />
         <activity
-            android:name=".guest.EstimateWriteActivity"
+            android:name=".auth.GuestJoinActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.EstimateCheckActivity"
-
-            android:name=".auth.JoinActivity"
+            android:name=".auth.GuideJoinActivity"
             android:exported="false" />
         <activity
-            android:name=".auth.join_select"
+            android:name=".auth.JoinSelectActivity"
             android:exported="false" />
         <activity
             android:name=".auth.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.chatting_guide"
+            android:name=".auth.ShowIDActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.estimate_list"
+            android:name=".guest.EstimateWriteActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.guide_main"
-
+            android:name=".guest.RegionSelectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.EstimateCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.CheckPortfolioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.OCRCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.SelectedEstimateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.EstimateListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.GuideMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.WritePortfolioActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -15,7 +15,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/hiddenplace_page_background"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="37dp" />
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/logo"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="포트폴리오 전송 거절 사유"
+        android:text="등본 OCR 인증"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -43,44 +43,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="다시 만날 수 있으면 좋겠네요.\n어떤 점이 맞지 않았는지 \n알려주실 수 있나요?"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="230dp"
-        android:layout_height="320dp"
-        android:background="@drawable/background_radius_gray"
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/plusbtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/OCRArea"/>
 
     <Button
+        android:id="@+id/OCRCheckBtn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:background="@drawable/background_radius_mint"
-        android:text="작성 완료"
+        android:text="확인"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintTop_toBottomOf="@+id/OCRArea" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

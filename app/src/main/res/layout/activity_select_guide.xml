@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".guide.EstimateListActivity"
+    android:layout_height="match_parent"
+    tools:context=".guest.SelectGuideActivity"
     android:orientation="vertical">
 
     <ImageView
@@ -18,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="견적서 리스트"
+        android:text="가이드 리스트"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
@@ -26,17 +27,9 @@
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/estimatelistRV"
+        android:id="@+id/GuideListRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"/>
-
-    <TextView
-        android:id="@+id/emptyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="표시할 견적서가 없습니다."
-        android:layout_gravity="center"
-        android:visibility="gone"/>
 
 </LinearLayout>
