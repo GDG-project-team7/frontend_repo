@@ -15,6 +15,7 @@ class EstimateCheckActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_estimate_check)
 
+        /*
         // 수락 버튼
         val acceptanceButton = findViewById<Button>(R.id.acceptance_button)
         acceptanceButton.setOnClickListener {
@@ -30,6 +31,7 @@ class EstimateCheckActivity : AppCompatActivity() {
             val intent = Intent(this, EstimateRejectionActivity::class.java)
             startActivity(intent)
         }
+        */
 
     }
 }
