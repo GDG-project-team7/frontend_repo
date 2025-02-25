@@ -18,6 +18,15 @@
         android:theme="@style/Theme.HiddenPlace"
         tools:targetApi="31">
         <activity
+            android:name=".guest.ViewMyEstimateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guest.AfterRegionPortActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guest.GuestCheckPortActivity"
+            android:exported="false" />
+        <activity
             android:name=".guest.GuestMainActivity"
             android:exported="false" />
         <activity
