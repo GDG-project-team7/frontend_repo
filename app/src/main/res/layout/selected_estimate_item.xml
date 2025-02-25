@@ -24,20 +24,19 @@
             android:id="@+id/SelectedUserId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OOO여행자"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp">
-        </TextView>
+            android:layout_marginTop="20dp"
+            android:text="OOO여행자"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
 
         <TextView
             android:id="@+id/SelectedRegion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="지역"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="지역"
             android:textSize="17sp">
         </TextView>
     </LinearLayout>

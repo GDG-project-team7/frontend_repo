@@ -13,6 +13,5 @@ class SelectedEstimateActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_selected_estimate)
 
-
     }
 }

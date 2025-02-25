@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="견적서 작성"
+        android:text="견적서 확인"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -42,6 +42,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="진행중"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
 
     <TextView
         android:id="@+id/textView"
@@ -70,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
+    <TextView
         android:id="@+id/age_area"
         android:layout_width="170dp"
         android:layout_height="20dp"
@@ -82,7 +96,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.212" />
 
-    <EditText
+    <TextView
         android:id="@+id/sex_area"
         android:layout_width="170dp"
         android:layout_height="20dp"
@@ -108,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sex_area"
         app:layout_constraintVertical_bias="0.081" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="230dp"
         android:layout_height="230dp"
@@ -123,7 +137,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:text="견적서 보내기"
+        android:text=" 해당 가이드의 포트폴리오 보기 "
         android:background="@drawable/background_radius_mint"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
         app:layout_constraintEnd_toEndOf="parent"
