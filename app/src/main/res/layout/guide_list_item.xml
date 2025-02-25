@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="220dp"
+    android:orientation="vertical"
+    android:background="@drawable/background_guide_list"
+    android:layout_marginLeft="40dp">
+
+    <!-- "지역" 텍스트 밑에 배경을 겹쳐서 배치 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="OOO가이드"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="지역"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+
+            <!-- 이미지 버튼 -->
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/hiddenplace_move" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp">
+
+            <!-- 배경 역할을 하는 뷰 -->
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:background="@drawable/background_rectangle_gray"
+                android:padding="5dp"/>
+
+            <!-- 실제 보여질 텍스트 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자기소개"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:padding="5dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 이미지 권한 추가 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -16,8 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HiddenPlace"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+
             android:name=".guest.ViewMyEstimateActivity"
             android:exported="false" />
         <activity
@@ -30,25 +34,28 @@
             android:name=".guest.GuestMainActivity"
             android:exported="false" />
         <activity
+            android:name=".guest.SelectGuideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.FindIDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.FindPW1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.FindPW2Activity"
+            android:exported="false" />
+        <activity
             android:name=".auth.GuestJoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.GuideJoinActivity"
             android:exported="false" />
         <activity
             android:name=".auth.JoinSelectActivity"
             android:exported="false" />
         <activity
             android:name=".auth.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.FindIDActivity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.GuideJoinActivity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.FindPW2Activity"
-            android:exported="false" />
-        <activity
-            android:name=".auth.FindPW1Activity"
             android:exported="false" />
         <activity
             android:name=".auth.ShowIDActivity"
@@ -60,22 +67,22 @@
             android:name=".guest.RegionSelectActivity"
             android:exported="false" />
         <activity
+            android:name=".guide.EstimateCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.CheckPortfolioActivity"
+            android:exported="false" />
+        <activity
             android:name=".guide.OCRCheckActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.EstimateCheckActivity"
+            android:name=".guide.SelectedEstimateActivity"
             android:exported="false" />
         <activity
             android:name=".guide.EstimateListActivity"
             android:exported="false" />
         <activity
             android:name=".guide.GuideMainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".guide.SelectedEstimateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".guide.CheckPortfolioActivity"
             android:exported="false" />
         <activity
             android:name=".guide.WritePortfolioActivity"

@@ -104,11 +104,16 @@
                 android:src="@drawable/hiddenplace_photo">
             </ImageView>
             <Button
+
+                android:contentDescription="mapbtn"
+                android:id="@+id/mapbtn"
                 android:layout_marginRight="70dp"
                 android:layout_width="10dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+
                 android:background="@drawable/hiddenplace_map">
+
             </Button>
         </LinearLayout>
         <LinearLayout
