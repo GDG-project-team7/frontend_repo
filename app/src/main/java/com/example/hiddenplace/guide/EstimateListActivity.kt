@@ -1,52 +1,60 @@
 package com.example.hiddenplace.guide
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.view.WindowInsetsAnimation
-import android.widget.Toast
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.hiddenplace.R
 import com.example.hiddenplace.RetrofitClient
-import com.example.hiddenplace.databinding.ActivityEstimateListBinding
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
 
 class EstimateListActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityEstimateListBinding
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: EstimateListRVAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEstimateListBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_estimate_list)
 
-        binding.estimatelistRV.layoutManager = LinearLayoutManager(this)
+        recyclerView = findViewById(R.id.estimatelistRV)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        loadEstimates()
+        // 서버에서 데이터 가져오기
+        fetchDataFromServer()
     }
 
-    private fun loadEstimates() {
-
-        RetrofitClient.instance.getEstimates().enqueue(object : retrofit2.Callback<List<Estimate>> {
+    private fun fetchDataFromServer() {
+        RetrofitClient.instance.getEstimates().enqueue(object : Callback<List<Estimate>> {
             override fun onResponse(call: Call<List<Estimate>>, response: Response<List<Estimate>>) {
                 if (response.isSuccessful) {
-                    val estimates = response.body() ?: emptyList()
-                    if (estimates.isEmpty()) {
-                        binding.emptyTextView.visibility = View.VISIBLE  // "견적서 없음" 메시지 표시
-                    } else {
-                        binding.estimatelistRV.adapter = EstimateListRVAdapter(estimates)
-                        binding.emptyTextView.visibility = View.GONE
-                    }
-                    Toast.makeText(this@EstimateListActivity, "데이터 수신 성공!", Toast.LENGTH_SHORT).show()
+                    val estimateItems = response.body() ?: emptyList()
+                    setupRecyclerView(estimateItems)
                 } else {
-                    Toast.makeText(this@EstimateListActivity, "Failed to load data", Toast.LENGTH_SHORT).show()
+                    Log.e("API_ERROR", "Response Error: ${response.code()}")
                 }
             }
 
             override fun onFailure(call: Call<List<Estimate>>, t: Throwable) {
-                Toast.makeText(this@EstimateListActivity, "Error: ${t.message}", Toast.LENGTH_LONG).show()
+                Log.e("API_ERROR", "Network Error: ${t.message}")
             }
         })
     }
 
+    private fun setupRecyclerView(estimateItems: List<Estimate>) {
+        adapter = EstimateListRVAdapter(estimateItems) { estimateItem ->
+            val intent = Intent(this, EstimateCheckActivity::class.java).apply {
+                putExtra("userName", estimateItem.user.userName) // user 객체에서 가져오기
+                putExtra("regionId", estimateItem.user.regionId)
+                putExtra("age", estimateItem.age)
+                putExtra("gender", estimateItem.gender)
+                putExtra("text", estimateItem.text)
+            }
+            startActivity(intent)
+        }
+        recyclerView.adapter = adapter
+    }
 }

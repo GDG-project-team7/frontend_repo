@@ -1,6 +1,8 @@
 package com.example.hiddenplace.guest
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,10 +14,12 @@ class GuestCheckPortActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_guest_check_port)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // 포트폴리오 보고 확인 버튼 누르면 게스트 메인페이지로 이동하도록 버튼 클릭 이벤트
+        val GuestCheckPortBtn : Button = findViewById(R.id.GuestCheckPortBtn)
+        GuestCheckPortBtn.setOnClickListener{
+            val intent = Intent(this, GuestMainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

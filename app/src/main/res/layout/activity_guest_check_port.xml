@@ -201,6 +201,7 @@
             app:layout_constraintVertical_bias="0.694" />
 
         <Button
+            android:id="@+id/GuestCheckPortBtn"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:background="@drawable/background_radius_mint"
