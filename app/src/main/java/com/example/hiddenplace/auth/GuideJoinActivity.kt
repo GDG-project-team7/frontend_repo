@@ -53,7 +53,7 @@ class GuideJoinActivity : AppCompatActivity() {
             }
 
             val joinModel = JoinModel(
-                userId = userId,
+                userAccountName = userId,
                 password = password,
                 userName = userName,
                 phoneNumber = phoneNumber,
