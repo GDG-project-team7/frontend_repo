@@ -201,6 +201,7 @@
     </RadioGroup>
 
     <Button
+        android:id="@+id/guestJoinAccept"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:background="@drawable/hiddenplace_button_mint"

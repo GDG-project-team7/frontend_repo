@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="로그아웃"
             android:layout_marginLeft="60dp"
-            android:background="@null">
+            android:background="@android:color/transparent">
         </Button>
     </LinearLayout>
 
@@ -130,7 +130,7 @@
         android:layout_height="wrap_content"
         android:text="메인 페이지로 이동"
         android:layout_marginTop="35dp"
-        android:background="null"
+        android:background="@android:color/transparent"
         android:layout_marginLeft="280dp">
     </Button>
 

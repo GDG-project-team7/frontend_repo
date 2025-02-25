@@ -1,5 +1,6 @@
 package com.example.hiddenplace.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -12,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.hiddenplace.R
 import com.example.hiddenplace.RetrofitClient
+import com.example.hiddenplace.guide.OCRCheckActivity
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -78,6 +80,11 @@ class GuideJoinActivity : AppCompatActivity() {
                     responseData?.let {
                         Log.d("GuideJoinActivity", "회원가입 성공: userId=${it.userId}, userName=${it.userName}, email=${it.email}, isGuide=${it.isGuide}")
                         Toast.makeText(this@GuideJoinActivity, "성공", Toast.LENGTH_SHORT).show()
+
+                        // **회원가입 성공 후 페이지 이동**
+                        val intent = Intent(this@GuideJoinActivity, OCRCheckActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
                     }
 
                 } else {
