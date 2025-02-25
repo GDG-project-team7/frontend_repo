@@ -1,7 +1,7 @@
 package com.example.hiddenplace.auth
 
 data class JoinModel(
-    val userId: String,
+    val userAccountName: String,
     val password: String,
     val userName: String,
     val phoneNumber: String,

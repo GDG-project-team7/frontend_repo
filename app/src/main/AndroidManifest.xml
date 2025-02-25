@@ -26,12 +26,7 @@
         <activity
             android:name=".auth.FindIDActivity"
             android:exported="false" />
-        <activity
-            android:name=".guide.SendPortfolioActivity"
-            android:exported="false" />
-        <activity
-            android:name=".guide.EstimateRejectionActivity"
-            android:exported="false" />
+
         <activity
             android:name=".guest.EstimateWriteActivity"
             android:exported="false" />
@@ -39,22 +34,39 @@
             android:name=".guide.EstimateCheckActivity"
             android:exported="false" />
         <activity
-            android:name=".auth.JoinActivity"
+            android:name=".auth.GuestJoinActivity"
             android:exported="false" />
         <activity
-            android:name=".auth.join_select"
+            android:name=".auth.JoinSelectActivity"
             android:exported="false" />
         <activity
             android:name=".auth.LoginActivity"
             android:exported="false" />
+
         <activity
-            android:name=".guide.chatting_guide"
+            android:name=".guide.EstimateListActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.estimate_list"
+            android:name=".guide.GuideMainActivity"
             android:exported="false" />
         <activity
-            android:name=".guide.guide_main"
+
+            android:name=".guide.SelectedEstimateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guest.RegionSelectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.GuideJoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.FindPW2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.FindPW1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.ShowIDActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
