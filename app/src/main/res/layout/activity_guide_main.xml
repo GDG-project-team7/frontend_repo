@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="110dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="150dp"
             android:src="@drawable/hiddenplace_logo">
         </ImageView>
 
@@ -125,12 +125,13 @@
             android:text="포트폴리오"/>
 
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="메인 페이지로 이동"
         android:layout_marginTop="35dp"
+        android:background="null"
         android:layout_marginLeft="280dp">
-    </TextView>
+    </Button>
 
 </LinearLayout>
