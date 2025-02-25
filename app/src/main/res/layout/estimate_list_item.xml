@@ -3,6 +3,7 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="330dp"
     android:layout_height="100dp"
     android:orientation="horizontal"
@@ -24,6 +25,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/UserId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OOO여행자"
@@ -34,6 +36,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/Region"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="지역"

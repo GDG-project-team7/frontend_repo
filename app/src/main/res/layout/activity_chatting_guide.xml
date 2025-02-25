@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".guide.chatting_guide">
+    tools:context=".guide.ChattingGuideActivity">
 
     <ImageView
         android:layout_width="110dp"
