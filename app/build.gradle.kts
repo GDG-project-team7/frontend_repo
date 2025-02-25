@@ -5,10 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.hiddenplace"
-    compileSdk = 35
-    buildFeatures {
-        viewBinding = true
-    }
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.hiddenplace"

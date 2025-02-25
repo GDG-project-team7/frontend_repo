@@ -27,6 +27,12 @@
             android:name=".auth.FindIDActivity"
             android:exported="false" />
         <activity
+            android:name=".guide.SendPortfolioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.EstimateRejectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".guest.EstimateWriteActivity"
             android:exported="false" />
         <activity
@@ -40,6 +46,9 @@
             android:exported="false" />
         <activity
             android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".guide.chatting_guide"
             android:exported="false" />
         <activity
             android:name=".guide.estimate_list"

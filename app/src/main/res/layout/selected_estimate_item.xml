@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:background="@drawable/hiddenplace_show"
+    android:layout_marginLeft="40dp">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/hiddenplace_guide_list_item_show"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="15dp">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/SelectedUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OOO여행자"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/SelectedRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지역"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="17sp">
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="견적서 확인"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp">
+    </Button>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.hiddenplace.auth
+package com.example.hiddenplace.guide
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,11 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.hiddenplace.R
 
-class JoinActivity : AppCompatActivity() {
+class SelectedEstimateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_join)
+        setContentView(R.layout.activity_selected_estimate)
 
     }
 }

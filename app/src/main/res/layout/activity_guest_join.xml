@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.JoinActivity">
+    tools:context=".auth.GuestJoinActivity">
 
     <ImageView
         android:id="@+id/backgroundImage33"
@@ -210,7 +210,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.786"
-        android:text="인증 요청"/>
+        android:text="회원가입"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
