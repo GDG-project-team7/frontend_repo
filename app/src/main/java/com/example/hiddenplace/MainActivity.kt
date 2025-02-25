@@ -16,11 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val travelbutton: Button = findViewById(R.id.travelbutton)
-        travelbutton.setOnClickListener{
-            val intent = Intent(this, GuideMainActivity::class.java)
-            startActivity(intent)
-        }
 
         val joinLoginbtn = findViewById<Button>(R.id.joinLoginbtn) // 버튼 ID 가져오기
 

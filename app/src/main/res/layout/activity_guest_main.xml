@@ -25,26 +25,23 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="3dp"
-                android:background="@null"
-                android:backgroundTint="@null"
-                android:gravity="start|center_vertical"
-                android:padding="0dp"
+                android:layout_marginStart="7dp"
+                android:background="back"
+                android:gravity="center"
                 android:textSize="14sp"
                 android:text="가이드 찾기">
             </Button>
 
             <Button
-                android:id="@+id/joinLoginbtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/GuestLogoutbtn"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="30dp"
                 android:background="@null"
-                android:backgroundTint="@null"
-                android:padding="0dp"
-                android:text="회원가입 / 로그인"
-                android:textSize="14sp"
-                android:gravity="end|center_vertical"
-                android:layout_marginEnd="17dp">
+                android:gravity="center"
+                android:text="로그아웃"
+                android:textSize="14sp">
             </Button>
         </LinearLayout>
 
@@ -55,7 +52,8 @@
             android:textSize="17sp"
             android:layout_marginTop="18dp"
             android:layout_gravity="center"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:textColor="@color/black">
         </TextView>
 
         <LinearLayout
@@ -64,17 +62,11 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/hiddenplace_mainsearch">
-            </ImageView>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -82,9 +74,9 @@
 
             <Button
                 android:id="@+id/travelbutton"
-                android:layout_width="4dp"
+                android:layout_width="20dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="70dp"
+                android:layout_marginLeft="50dp"
                 android:layout_weight="1"
                 android:background="@drawable/hiddenplace_travle"
                 android:contentDescription="Travel Button"></Button>
@@ -97,6 +89,7 @@
                 android:src="@drawable/hiddenplace_eatbutton"></ImageView>
 
             <ImageView
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="20dp"
                 android:layout_height="48dp"
@@ -104,11 +97,20 @@
                 android:src="@drawable/hiddenplace_photo">
             </ImageView>
             <Button
-                android:layout_marginRight="70dp"
-                android:layout_width="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:background="@drawable/hiddenplace_map">
+            </Button>
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/hiddenplace_request">
+
             </Button>
         </LinearLayout>
         <LinearLayout
@@ -118,8 +120,8 @@
             android:gravity="center">
 
             <TextView
-                android:layout_marginLeft="70dp"
-                android:layout_width="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_width="8dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:text="여행"
@@ -131,7 +133,6 @@
                 android:textSize="13sp"
                 android:layout_width="10dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:text="맛집"
                 android:gravity="center">
@@ -139,7 +140,7 @@
 
             <TextView
                 android:textSize="13sp"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_width="10dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -148,13 +149,25 @@
             </TextView>
             <TextView
                 android:textSize="13sp"
-                android:layout_marginRight="70dp"
+                android:layout_marginRight="0dp"
                 android:layout_width="10dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:text="지도"
                 android:gravity="center">
             </TextView>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="작성한 견적서"
+                android:textSize="13sp">
+
+            </TextView>
+
         </LinearLayout>
 
         <TextView
