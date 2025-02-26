@@ -40,6 +40,7 @@
         app:layout_constraintVertical_bias="0.08"/>
 
     <Button
+        android:id="@+id/guestSelectbtn"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:background="@drawable/hiddenplace_role_choice"
@@ -53,6 +54,7 @@
         android:textSize="17sp"/>
 
     <Button
+        android:id="@+id/guideSelectbtn"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:background="@drawable/hiddenplace_role_choice"

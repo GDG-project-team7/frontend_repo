@@ -1,6 +1,7 @@
 package com.example.hiddenplace
 
 import com.example.hiddenplace.auth.JoinService
+import com.example.hiddenplace.guest.GuideListService
 import com.example.hiddenplace.guide.EstimateListService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -34,5 +35,13 @@ object RetrofitClient {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(JoinService::class.java)
+    }
+
+    val guideListService : GuideListService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(GuideListService::class.java)
     }
 }
