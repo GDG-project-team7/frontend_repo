@@ -1,18 +1,29 @@
 package com.example.hiddenplace.guide
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hiddenplace.databinding.EstimateListItemBinding
 
-class EstimateListRVAdapter(private val estimateList: List<Estimate>) :
-    RecyclerView.Adapter<EstimateListRVAdapter.EstimateViewHolder>() {
+class EstimateListRVAdapter(
+    private val estimateItems: List<Estimate>,
+    private val onItemClicked: (Estimate) -> Unit // 아이템 클릭 콜백
+) : RecyclerView.Adapter<EstimateListRVAdapter.EstimateViewHolder>() {
 
-    class EstimateViewHolder(private val binding: EstimateListItemBinding) :
+    inner class EstimateViewHolder(private val binding: EstimateListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(estimate: Estimate) {
-            binding.UserId.text = "${estimate.user.userId}"
-            binding.Region.text = "${estimate.user.region}"
+            binding.UserName.text = estimate.user.userName
+            binding.RegionId.text = estimate.user.regionId.toString()
+
+            // 아이템 클릭 이벤트
+            binding.root.setOnClickListener {
+                onItemClicked(estimate)
+            }
         }
     }
 
@@ -22,8 +33,8 @@ class EstimateListRVAdapter(private val estimateList: List<Estimate>) :
     }
 
     override fun onBindViewHolder(holder: EstimateViewHolder, position: Int) {
-        holder.bind(estimateList[position])
+        holder.bind(estimateItems[position])
     }
 
-    override fun getItemCount() = estimateList.size
+    override fun getItemCount(): Int = estimateItems.size
 }

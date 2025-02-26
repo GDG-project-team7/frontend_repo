@@ -16,5 +16,13 @@ class GuideMainActivity : AppCompatActivity() {
             val intent = Intent(this,EstimateListActivity::class.java)
             startActivity(intent)
         }
+
+        val GuidePortCheckBtn: Button = findViewById(R.id.GuidePortCheckBtn)
+        GuidePortCheckBtn.setOnClickListener{
+            val intent = Intent(this,CheckPortfolioActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

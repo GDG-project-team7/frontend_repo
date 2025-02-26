@@ -44,6 +44,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //test용 버튼 메인페이지의 여행 버튼 누르면 가이드 메인으로 이동하도록
+        val travelbutton = findViewById<Button>(R.id.travelbutton)
+        travelbutton.setOnClickListener {
+            val intent = Intent(this, GuideMainActivity::class.java)
+            startActivity(intent) // 액티비티 시작
+        }
+
 
     }
 }
