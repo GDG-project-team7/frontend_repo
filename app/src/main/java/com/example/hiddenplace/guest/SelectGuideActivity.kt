@@ -1,6 +1,7 @@
 package com.example.hiddenplace.guest
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,7 @@ class SelectGuideActivity : AppCompatActivity() {
     }
 
     private fun fetchGuides(regionId: Int) {
+        Log.d("API_CALL", "Fetching users from server...")
         RetrofitClient.guideListService.getGuides(regionId).enqueue(object : Callback<List<GuideListModel>> {
             override fun onResponse(call: Call<List<GuideListModel>>, response: Response<List<GuideListModel>>) {
                 if (response.isSuccessful) {
@@ -45,6 +47,7 @@ class SelectGuideActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<GuideListModel>>, t: Throwable) {
+                Log.e("API_FAILURE", "API request failed: ${t.message}", t)
                 Toast.makeText(this@SelectGuideActivity, "데이터 로딩 실패", Toast.LENGTH_SHORT).show()
             }
         })

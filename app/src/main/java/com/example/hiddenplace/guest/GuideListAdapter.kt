@@ -27,8 +27,8 @@ class GuideListAdapter :  ListAdapter<GuideListModel, GuideListAdapter.GuideView
         private val regionTextView: TextView = itemView.findViewById(R.id.regionTextView)
 
         fun bind(guide: GuideListModel) {
-            userNameTextView.text = guide.userName
-            profileTextView.text = guide.profileText
+            userNameTextView.text = "${guide.userName} 가이드"
+            profileTextView.text = "${guide.profileText}"
             regionTextView.text = NumToRegion.getRegionName(guide.regionId) // 변환된 한글 지역명 표시
         }
     }

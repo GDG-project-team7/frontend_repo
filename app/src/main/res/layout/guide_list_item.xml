@@ -5,7 +5,8 @@
     android:layout_height="220dp"
     android:orientation="vertical"
     android:background="@drawable/background_guide_list"
-    android:layout_marginLeft="40dp">
+    android:layout_marginLeft="40dp"
+    android:layout_marginBottom="20dp">
 
     <!-- "지역" 텍스트 밑에 배경을 겹쳐서 배치 -->
     <LinearLayout
@@ -29,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
-                    android:text="OOO가이드"
+                    android:text="OOO 가이드"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -63,22 +64,23 @@
             android:layout_marginTop="5dp">
 
             <!-- 배경 역할을 하는 뷰 -->
-            <TextView
-                android:id="@+id/profileTextView"
-                android:layout_marginTop="15dp"
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:background="@drawable/background_rectangle_gray"
-                android:padding="5dp"/>
 
             <!-- 실제 보여질 텍스트 -->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_rectangle_gray"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/profileTextView"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="자기소개"
-                android:textSize="16sp"
                 android:layout_gravity="center"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:text="자기소개"
+                android:textSize="20sp" />
         </FrameLayout>
     </LinearLayout>
 
