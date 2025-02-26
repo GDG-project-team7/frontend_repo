@@ -1,6 +1,7 @@
 package com.example.hiddenplace
 
 import com.example.hiddenplace.auth.JoinService
+import com.example.hiddenplace.guest.AfterRegionPortService
 import com.example.hiddenplace.guest.GuideListService
 import com.example.hiddenplace.guide.EstimateListService
 import okhttp3.OkHttpClient
@@ -44,4 +45,15 @@ object RetrofitClient {
             .build()
             .create(GuideListService::class.java)
     }
+
+    val afterRegionPortService : AfterRegionPortService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(AfterRegionPortService::class.java)
+    }
+
+
+
 }

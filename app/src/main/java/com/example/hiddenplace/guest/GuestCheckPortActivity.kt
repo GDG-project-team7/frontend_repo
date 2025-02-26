@@ -15,6 +15,8 @@ class GuestCheckPortActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_guest_check_port)
 
+
+
         // 포트폴리오 보고 확인 버튼 누르면 게스트 메인페이지로 이동하도록 버튼 클릭 이벤트
         val GuestCheckPortBtn : Button = findViewById(R.id.GuestCheckPortBtn)
         GuestCheckPortBtn.setOnClickListener{
