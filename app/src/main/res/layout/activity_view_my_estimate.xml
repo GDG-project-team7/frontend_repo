@@ -135,6 +135,7 @@
         app:layout_constraintVertical_bias="0.149" />
 
     <Button
+        android:id="@+id/reviewPortBtn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text=" 해당 가이드의 포트폴리오 보기 "

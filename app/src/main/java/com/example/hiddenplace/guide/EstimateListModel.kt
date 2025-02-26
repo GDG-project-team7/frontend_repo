@@ -4,7 +4,7 @@ data class User (
     val userId: String,
     val userName: String,
     val isGuide: Boolean,
-    val region: String
+    val regionId: Int
 )
 
 data class Estimate (
