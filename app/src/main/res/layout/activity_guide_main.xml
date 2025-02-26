@@ -25,10 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:background="@android:color/transparent">
-        </Button>
             android:background="@android:color/transparent"
-            android:text="로그아웃"></Button>
+            android:text="로그아웃">
+        </Button>
 
     </LinearLayout>
 
@@ -129,16 +128,12 @@
             android:text="포트폴리오"/>
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="메인 페이지로 이동"
-        android:layout_marginTop="35dp"
-        android:background="@android:color/transparent"
-        android:layout_marginLeft="280dp">
-        android:layout_marginLeft="280dp"
-        android:background="@android:color/transparent">
-
-    </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메인 페이지로 이동"
+            android:layout_marginTop="35dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="280dp"/>
 
 </LinearLayout>

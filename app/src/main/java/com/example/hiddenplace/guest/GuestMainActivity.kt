@@ -23,13 +23,14 @@ class GuestMainActivity : AppCompatActivity() {
             val intent = Intent(this, RegionSelectActivity::class.java)
             startActivity(intent) // 액티비티 시작
 
-        // 작성한 견적서 보기 버튼 클릭 이벤트
-        val lookRequestBtn : Button = findViewById(R.id.lookRequestBtn)
-        lookRequestBtn.setOnClickListener{
-            val intent = Intent(this, ViewMyEstimateActivity::class.java)
-            startActivity(intent)
+            // 작성한 견적서 보기 버튼 클릭 이벤트
+            val lookRequestBtn: Button = findViewById(R.id.lookRequestBtn)
+            lookRequestBtn.setOnClickListener {
+                val intent = Intent(this, ViewMyEstimateActivity::class.java)
+                startActivity(intent)
+
+            }
 
         }
-
     }
 }

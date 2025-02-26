@@ -20,9 +20,14 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class GuideJoinActivity : AppCompatActivity() {
+
+    private var isGuide: Boolean = false // 기본값은 false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guide_join)
+
+        isGuide = intent.getBooleanExtra("isGuide", false)
 
         val etUserId = findViewById<EditText>(R.id.etUserId)
         val etPassword = findViewById<EditText>(R.id.etPassword)
@@ -63,7 +68,7 @@ class GuideJoinActivity : AppCompatActivity() {
                 gender = gender,
                 email = email,
                 regionId = 0, // 기본값
-                isGuide = true // 가이드 회원가입이므로 true
+                isGuide = isGuide // 가이드 회원가입이므로 true
             )
             sendJoinRequest(joinModel)
         }
