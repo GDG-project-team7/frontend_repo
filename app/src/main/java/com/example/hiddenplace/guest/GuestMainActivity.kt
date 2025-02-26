@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.hiddenplace.R
+import com.example.hiddenplace.guide.CheckPortfolioActivity
 
 class GuestMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

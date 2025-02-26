@@ -35,8 +35,6 @@
             </Button>
 
             <Button
-                android:id="@+id/joinLoginbtn"
-                android:layout_width="match_parent"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/joinbtn"
                 android:layout_width="70dp"
