@@ -107,6 +107,7 @@
         android:textSize="15sp"/>
 
     <EditText
+        android:id="@+id/etUserId2"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:background="@drawable/hiddenplace_join_area"
@@ -118,6 +119,7 @@
         app:layout_constraintVertical_bias="0.202"/>
 
     <EditText
+        android:id="@+id/etPhoneNumber2"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:background="@drawable/hiddenplace_join_area"
@@ -129,6 +131,7 @@
         app:layout_constraintVertical_bias="0.441" />
 
     <EditText
+        android:id="@+id/etPassword2"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:background="@drawable/hiddenplace_join_area"
@@ -140,6 +143,7 @@
         app:layout_constraintVertical_bias="0.282" />
 
     <EditText
+        android:id="@+id/etUserName2"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:background="@drawable/hiddenplace_join_area"
@@ -151,6 +155,7 @@
         app:layout_constraintVertical_bias="0.361" />
 
     <EditText
+        android:id="@+id/etBirthday2"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:background="@drawable/hiddenplace_join_area"
@@ -162,6 +167,7 @@
         app:layout_constraintVertical_bias="0.521" />
 
     <EditText
+        android:id="@+id/etEmail2"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:background="@drawable/hiddenplace_join_area"
@@ -173,6 +179,7 @@
         app:layout_constraintVertical_bias="0.68" />
 
     <RadioGroup
+        android:id="@+id/rgGender2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -184,11 +191,13 @@
         app:layout_constraintVertical_bias="0.61">
 
         <RadioButton
+            android:id="@+id/rbMale2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="남자" />
 
         <RadioButton
+            android:id="@+id/rbFemale2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="여자" />

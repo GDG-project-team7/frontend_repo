@@ -78,7 +78,7 @@ class GuideJoinActivity : AppCompatActivity() {
                     val responseData = response.body()
 
                     responseData?.let {
-                        Log.d("GuideJoinActivity", "회원가입 성공: userId=${it.userId}, userName=${it.userName}, email=${it.email}, isGuide=${it.isGuide}")
+                        Log.d("GuideJoinActivity", "회원가입 성공: userId=${it.userId}")
                         Toast.makeText(this@GuideJoinActivity, "성공", Toast.LENGTH_SHORT).show()
 
                         // **회원가입 성공 후 페이지 이동**
