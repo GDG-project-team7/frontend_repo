@@ -34,6 +34,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -45,38 +46,40 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.071" />
+            app:layout_constraintVertical_bias="0.084" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:gravity="center"
             android:text="가이드의 포트폴리오"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintHorizontal_bias="0.651"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.084" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="제목"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="21sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.291"
+            app:layout_constraintHorizontal_bias="0.204"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.154" />
+            app:layout_constraintVertical_bias="0.155" />
 
         <TextView
             android:id="@+id/textView3"
@@ -84,42 +87,41 @@
             android:layout_height="wrap_content"
             android:text="한줄 소개"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.193"
+            app:layout_constraintHorizontal_bias="0.219"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.199" />
+            app:layout_constraintVertical_bias="0.212" />
 
         <TextView
-            android:textSize="15sp"
-            android:textColor="@color/black"
             android:id="@+id/mainText"
-            android:layout_width="170dp"
-            android:layout_height="24dp"
+            android:layout_width="217dp"
+            android:layout_height="30dp"
             android:background="@drawable/background_radius_gray"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.228"
-            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.639"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.157" />
-
+            app:layout_constraintVertical_bias="0.155" />
 
         <TextView
-            android:textSize="13sp"
-            android:textColor="@color/black"
             android:id="@+id/profileText"
             android:layout_width="260dp"
-            android:layout_height="20dp"
+            android:layout_height="43dp"
             android:background="@drawable/background_radius_gray"
+            android:textColor="@color/black"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.239" />
+            app:layout_constraintVertical_bias="0.26" />
 
         <TextView
             android:id="@+id/textView8"
@@ -129,27 +131,28 @@
             android:gravity="center"
             android:text="여행지"
             android:textColor="@color/black"
-            android:textSize="13dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.219"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.286" />
+            app:layout_constraintVertical_bias="0.34" />
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="15sp"
             android:id="@+id/travelSpot"
             android:layout_width="260dp"
             android:layout_height="80dp"
             android:background="@drawable/background_radius_gray"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.351" />
+            app:layout_constraintVertical_bias="0.416" />
 
         <TextView
 
@@ -160,27 +163,28 @@
             android:gravity="center"
             android:text="맛집"
             android:textColor="@color/black"
-            android:textSize="13dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.22"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.437" />
+            app:layout_constraintVertical_bias="0.517" />
 
         <TextView
-            android:textSize="15sp"
-            android:textColor="@color/black"
             android:id="@+id/foodSpot"
             android:layout_width="260dp"
             android:layout_height="80dp"
             android:background="@drawable/background_radius_gray"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/backgroundImage"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/backgroundImage"
-            app:layout_constraintVertical_bias="0.515" />
+            app:layout_constraintVertical_bias="0.608" />
 
         <TextView
 
@@ -191,27 +195,28 @@
             android:gravity="center"
             android:text="포토스팟"
             android:textColor="@color/black"
-            android:textSize="13dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.22"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/backgroundImage"
-            app:layout_constraintVertical_bias="0.595" />
+            app:layout_constraintVertical_bias="0.686" />
 
         <TextView
-            android:textSize="15sp"
-            android:textColor="@color/black"
             android:id="@+id/photoSpot"
             android:layout_width="260dp"
             android:layout_height="80dp"
             android:background="@drawable/background_radius_gray"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.694" />
+            app:layout_constraintVertical_bias="0.794" />
 
         <Button
             android:id="@+id/WriteEstimateBtn"
@@ -221,10 +226,9 @@
             android:text=" 견적서 작성하기 "
             app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.883" />
+            app:layout_constraintVertical_bias="0.879" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,7 @@
             </Button>
 
             <Button
+                android:textColor="@color/black"
                 android:id="@+id/GuestLogoutbtn"
                 android:layout_width="100dp"
                 android:layout_height="36dp"
@@ -122,6 +123,7 @@
             android:gravity="center">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_marginLeft="45dp"
                 android:layout_width="8dp"
                 android:layout_height="40dp"
@@ -132,6 +134,7 @@
             </TextView>
 
             <TextView
+                android:textColor="@color/black"
                 android:textSize="13sp"
                 android:layout_width="10dp"
                 android:layout_height="40dp"
@@ -141,6 +144,7 @@
             </TextView>
 
             <TextView
+                android:textColor="@color/black"
                 android:textSize="13sp"
                 android:layout_marginRight="0dp"
                 android:layout_width="10dp"
@@ -150,6 +154,7 @@
                 android:gravity="center">
             </TextView>
             <TextView
+                android:textColor="@color/black"
                 android:textSize="13sp"
                 android:layout_marginRight="0dp"
                 android:layout_width="10dp"
@@ -160,6 +165,7 @@
             </TextView>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="20dp"
                 android:layout_height="40dp"
                 android:layout_marginRight="32dp"
@@ -173,6 +179,7 @@
         </LinearLayout>
 
         <TextView
+
             android:layout_marginTop="40dp"
             android:layout_marginLeft="30dp"
             android:layout_width="wrap_content"
@@ -195,21 +202,25 @@
                     android:layout_marginLeft="30dp"
                     android:layout_width="100dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/hiddenplace_show">
+                    android:src="@drawable/place1"
+                    android:scaleType="centerCrop">
                 </ImageView>
                 <ImageView
                     android:contentDescription="히플 인기 관광지 이미지 2"
                     android:layout_marginLeft="20dp"
                     android:layout_width="100dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/hiddenplace_show">
+                    android:src="@drawable/place2"
+                    android:scaleType="centerCrop">
                 </ImageView>
                 <ImageView
                     android:contentDescription="히플 인기 관광지 이미지 3"
                     android:layout_marginLeft="20dp"
                     android:layout_width="100dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/hiddenplace_show">
+                    android:src="@drawable/place3"
+                    android:scaleType="centerCrop"
+                    >
                 </ImageView>
             </LinearLayout>
         </HorizontalScrollView>
@@ -237,22 +248,28 @@
                     android:layout_marginLeft="30dp"
                     android:layout_width="100dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/hiddenplace_show">
+                    android:src="@drawable/place4"
+                    android:scaleType="centerCrop"
+                    >
                 </ImageView>
                 <ImageView
                     android:contentDescription="히플 인기 포폴 이미지 2"
                     android:layout_marginLeft="20dp"
                     android:layout_width="100dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/hiddenplace_show">
+                    android:src="@drawable/place5"
+                    android:scaleType="centerCrop"
+                    >
                 </ImageView>
+
                 <ImageView
-                    android:contentDescription="히플 인기 포폴 이미지 3"
-                    android:layout_marginLeft="20dp"
                     android:layout_width="100dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/hiddenplace_show">
-                </ImageView>
+                    android:layout_marginLeft="20dp"
+                    android:contentDescription="히플 인기 포폴 이미지 3"
+                    android:src="@drawable/place6"
+                    android:scaleType="centerCrop"
+                    ></ImageView>
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -275,7 +292,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/hiddenplace_guideshow"/>
+                android:src="@drawable/hiddenplace_guideshow" />
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"

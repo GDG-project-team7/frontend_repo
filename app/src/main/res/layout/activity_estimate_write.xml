@@ -96,14 +96,14 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="210dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="가고싶은 여행지, 혹은 가이드에게 전달하고 싶은 내용을 작성해주세요! 자세할수록 좋답니다."
+        android:text="포트폴리오에 대해 궁금한 점이 있나요?\n가이드에게 질문을 작성해 주세요!\n가이드가 견적서를 검토할 예정입니다."
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sex_area"
         app:layout_constraintVertical_bias="0.081" />
@@ -115,12 +115,13 @@
         android:background="@drawable/background_radius_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.149" />
 
     <Button
+        android:id="@+id/EstimateAcceptBtn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="견적서 보내기"

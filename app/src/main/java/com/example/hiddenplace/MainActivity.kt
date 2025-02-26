@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -29,13 +30,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent) // 액티비티 시작
         }
 
-        //로그인 버튼 클릭 시 페이지 이동
+        //로그인 버튼 클릭 시 페이지 이동 0226 데모데이 이슈로 잠시 주석처리
+        /*
         val Loginbtn = findViewById<Button>(R.id.Loginbtn) // 버튼 ID 가져오기
 
         Loginbtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent) // 액티비티 시작
         }
+        */
 
         //지도 버튼 클릭 시 페이지 이동
         val mapbtn = findViewById<Button>(R.id.mapbtn)
@@ -45,9 +48,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //test용 버튼 메인페이지의 여행 버튼 누르면 게스트 메인으로 이동하도록
-        val travelbutton = findViewById<Button>(R.id.travelbutton)
-        travelbutton.setOnClickListener {
+
+        //데모데이 이슈로 메인에서 로그인버튼 클릭시 게스트 메인으로 이동하도록 연결. 추후 삭제 필요
+        val Loginbtn = findViewById<Button>(R.id.Loginbtn) // 버튼 ID 가져오기
+
+        Loginbtn.setOnClickListener {
+            Toast.makeText(this,"여행자 로그인 성공!",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, GuestMainActivity::class.java)
             startActivity(intent) // 액티비티 시작
         }
