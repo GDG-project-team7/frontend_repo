@@ -1,6 +1,8 @@
 package com.example.hiddenplace.guest
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,10 +14,13 @@ class AfterRegionPortActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_after_region_port)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // 가이드를 선택하여 포트폴리오가 나온 후 견적서 작성하는 버튼 클릭 이벤트
+        val WriteEstimateBtn : Button = findViewById(R.id.WriteEstimateBtn)
+        WriteEstimateBtn.setOnClickListener{
+            val intent = Intent(this, EstimateWriteActivity::class.java)
+            startActivity(intent)
         }
+
     }
 }
