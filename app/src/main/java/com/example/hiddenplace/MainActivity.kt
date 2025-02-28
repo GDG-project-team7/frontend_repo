@@ -49,14 +49,16 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //데모데이 이슈로 메인에서 로그인버튼 클릭시 게스트 메인으로 이동하도록 연결. 추후 삭제 필요
+
+        //데모데이 이슈로 메인에서 로그인버튼 클릭시 여행자/게스트 역할 선택 액태비티로 이동하도록 연결. 추후 삭제 필요
         val Loginbtn = findViewById<Button>(R.id.Loginbtn) // 버튼 ID 가져오기
 
         Loginbtn.setOnClickListener {
-            Toast.makeText(this,"여행자 로그인 성공!",Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, GuestMainActivity::class.java)
+            //Toast.makeText(this,"여행자 로그인 성공!",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, JoinSelectActivity::class.java)
             startActivity(intent) // 액티비티 시작
         }
+
 
 
     }

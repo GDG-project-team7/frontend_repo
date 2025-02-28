@@ -19,7 +19,7 @@ class EstimateWriteActivity : AppCompatActivity() {
 
         val EstimateAcceptBtn : Button = findViewById(R.id.EstimateAcceptBtn)
         EstimateAcceptBtn.setOnClickListener{
-            Toast.makeText(this, "견적서가 성공적으로 전송되었습니다",Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "견적서가 성공적으로 전송되었습니다",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, GuestMainActivity::class.java)
             startActivity(intent)
 
