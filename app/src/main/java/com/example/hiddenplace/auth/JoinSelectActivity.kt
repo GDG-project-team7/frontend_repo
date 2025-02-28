@@ -14,6 +14,8 @@ class JoinSelectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join_select)
 
+
+        // 데모데이 끝나면 삭제 필요
         val guestSelectbtn = findViewById<Button>(R.id.guestSelectbtn) // 버튼 ID 가져오기
 
         guestSelectbtn.setOnClickListener {
