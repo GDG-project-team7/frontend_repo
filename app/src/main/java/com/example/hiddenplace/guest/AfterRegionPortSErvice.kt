@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface AfterRegionPortService {
-    @GET("{regionId}") // {regionId}를 URL에 포함
-    fun getPortfolio(@Path("regionId") regionId: Int): Call<List<AfterRegionPortmodel>>
+    @GET("/travelerPage/getPortfolio/{guideId}")
+    fun getPortfolio(@Path("guideId") guideId: Int): Call<List<AfterRegionPortmodel>>
 }

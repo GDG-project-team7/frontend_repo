@@ -14,26 +14,12 @@ class JoinSelectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join_select)
 
-
-        // 데모데이 끝나면 삭제 필요
         val guestSelectbtn = findViewById<Button>(R.id.guestSelectbtn) // 버튼 ID 가져오기
-
-        guestSelectbtn.setOnClickListener {
-            Toast.makeText(this,"여행자 로그인 성공!",Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, GuestMainActivity::class.java)
-            startActivity(intent) // 액티비티 시작
-        }
-
-
-        /* 데모데이 이슈로 여행자 선택버튼 주석처리. 추후 주석 삭제 필요
-        val guestSelectbtn = findViewById<Button>(R.id.guestSelectbtn)
 
         guestSelectbtn.setOnClickListener {
             val intent = Intent(this, GuestJoinActivity::class.java)
             startActivity(intent) // 액티비티 시작
         }
-        */
-
 
         val guideSelectbtn = findViewById<Button>(R.id.guideSelectbtn)
 

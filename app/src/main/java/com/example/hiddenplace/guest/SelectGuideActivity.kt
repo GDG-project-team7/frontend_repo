@@ -29,9 +29,9 @@ class SelectGuideActivity : AppCompatActivity()  {
         recyclerView = findViewById(R.id.GuideListRV)
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = GuideListAdapter { guide ->
-            Log.d("CLICK_EVENT", "Guide clicked: ID=${guide.id}, Name=${guide.userName}, Region=${guide.regionId}")
+            Log.d("CLICK_EVENT", "Guide clicked: ID=${guide.userId}, Name=${guide.userName}, Region=${guide.regionId}")
             val intent = Intent(this, AfterRegionPortActivity::class.java)
-            intent.putExtra("GUIDE_ID", guide.id)  // 올바른 키 설정
+            intent.putExtra("GUIDE_ID", guide.userId)  // 올바른 키 설정
             intent.putExtra("USER_NAME", guide.userName)
             intent.putExtra("REGION_ID", guide.regionId) // 지역 정보 전달
             startActivity(intent)

@@ -1,6 +1,6 @@
 package com.example.hiddenplace.auth
 
-data class JoinModel(
+data class GuestJoinModel(
     val userAccountName: String,
     val password: String,
     val userName: String,
@@ -9,5 +9,6 @@ data class JoinModel(
     val gender: Boolean,
     val email: String,
     val regionId: Int,
-    val isGuide: Boolean
+    val guide: Boolean,
+    val form: String,
 )

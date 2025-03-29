@@ -13,6 +13,7 @@ import com.example.hiddenplace.auth.GuideJoinActivity
 import com.example.hiddenplace.auth.JoinSelectActivity
 import com.example.hiddenplace.auth.LoginActivity
 import com.example.hiddenplace.guest.GuestMainActivity
+import com.example.hiddenplace.guest.RegionSelectActivity
 import com.example.hiddenplace.guide.EstimateListActivity
 import com.example.hiddenplace.guide.GuideMainActivity
 
@@ -56,6 +57,14 @@ class MainActivity : AppCompatActivity() {
         Loginbtn.setOnClickListener {
             //Toast.makeText(this,"여행자 로그인 성공!",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, JoinSelectActivity::class.java)
+            startActivity(intent) // 액티비티 시작
+        }
+
+        //서버 연결 중, 게스트 회원가입 해결 못하여 우선 메인 페이지에서 이동
+        val travelbtn = findViewById<Button>(R.id.travelbutton) // 버튼 ID 가져오기
+
+        travelbtn.setOnClickListener {
+            val intent = Intent(this, RegionSelectActivity::class.java)
             startActivity(intent) // 액티비티 시작
         }
 

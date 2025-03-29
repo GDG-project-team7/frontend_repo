@@ -35,7 +35,7 @@ class GuideListAdapter(private val onItemClick: (GuideListModel) -> Unit) :
 
         fun bind(guide: GuideListModel) {
             userNameTextView.text = "${guide.userName} 가이드"
-            profileTextView.text = guide.profileText
+            profileTextView.text = guide.introduction
             regionTextView.text = NumToRegion.getRegionName(guide.regionId)
 
             // 🔥 클릭 이벤트 추가
@@ -48,7 +48,7 @@ class GuideListAdapter(private val onItemClick: (GuideListModel) -> Unit) :
 
 class GuideDiffCallback : DiffUtil.ItemCallback<GuideListModel>() {
     override fun areItemsTheSame(oldItem: GuideListModel, newItem: GuideListModel): Boolean {
-        return oldItem.id == newItem.id
+        return oldItem.userId == newItem.userId
     }
 
     override fun areContentsTheSame(oldItem: GuideListModel, newItem: GuideListModel): Boolean {

@@ -76,7 +76,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/age_area"
+            android:id="@+id/saveTitle"
             android:layout_width="170dp"
             android:layout_height="24dp"
             android:background="@drawable/background_radius_gray"
@@ -89,7 +89,7 @@
 
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/saveIntroduction"
             android:layout_width="260dp"
             android:layout_height="20dp"
             android:background="@drawable/background_radius_gray"
@@ -116,7 +116,7 @@
             app:layout_constraintVertical_bias="0.286" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/saveTravelPlace"
             android:layout_width="260dp"
             android:layout_height="80dp"
             android:background="@drawable/background_radius_gray"
@@ -144,7 +144,7 @@
             app:layout_constraintVertical_bias="0.437" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/saveFoodPlace"
             android:layout_width="260dp"
             android:layout_height="80dp"
             android:background="@drawable/background_radius_gray"
@@ -172,7 +172,7 @@
             app:layout_constraintVertical_bias="0.595" />
 
         <EditText
-
+            android:id="@+id/savePhotoPlace"
             android:layout_width="260dp"
             android:layout_height="80dp"
             android:background="@drawable/background_radius_gray"

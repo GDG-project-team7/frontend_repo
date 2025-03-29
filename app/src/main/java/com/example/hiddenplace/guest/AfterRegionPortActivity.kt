@@ -39,13 +39,13 @@ class AfterRegionPortActivity : AppCompatActivity() {
         photoSpotTextView = findViewById(R.id.photoSpot)
 
         // Intent에서 `regionId`와 `id` 값을 가져옴
-        val regionId = intent.getIntExtra("REGION_ID", 0)
+        //val regionId = intent.getIntExtra("REGION_ID", 0)
         val guideId = intent.getIntExtra("GUIDE_ID", 0)  // 특정 가이드의 id
 
 
-        Log.d("INTENT_DATA", "Received: GUIDE_ID=$guideId,  REGION_ID=$regionId")
+        Log.d("INTENT_DATA", "Received: GUIDE_ID=$guideId")
         // API 요청하여 데이터 가져오기
-        fetchRegionData(regionId, guideId)
+        fetchRegionData(guideId)
 
         // 가이드 포트폴리오 확인 후 견적서 작성 페이지로 넘어가는 버튼 클릭이벤트
         val WriteEstimateBtn : Button = findViewById(R.id.WriteEstimateBtn)
@@ -55,11 +55,11 @@ class AfterRegionPortActivity : AppCompatActivity() {
         }
     }
 
-    private fun fetchRegionData(regionId: Int, guideId: Int) {
-        Log.d("API_REQUEST", "Fetching data for regionId=$regionId, guideId=$guideId")
+    private fun fetchRegionData(guideId: Int) {
+        Log.d("API_REQUEST", "Fetching data for guideId=$guideId")
 
         // regionId를 전달하여 API 호출
-        RetrofitClient.afterRegionPortService.getPortfolio(regionId).enqueue(object :
+        RetrofitClient.afterRegionPortService.getPortfolio(guideId).enqueue(object :
             Callback<List<AfterRegionPortmodel>> {
             override fun onResponse(
                 call: Call<List<AfterRegionPortmodel>>,
@@ -77,18 +77,18 @@ class AfterRegionPortActivity : AppCompatActivity() {
                             Log.d("DATA_FOUND", "Guide found: ${guide.userName}")
 
                             userNameTextView.text = guide.userName
-                            mainTextView.text = guide.mainText
-                            profileTextView.text = guide.profileText
-                            travelSpotTextView.text = guide.travelSpot.joinToString(", ")
-                            foodSpotTextView.text = guide.foodSpot.joinToString(", ")
-                            photoSpotTextView.text = guide.photoSpot.joinToString(", ")
+                            mainTextView.text = guide.title
+                            profileTextView.text = guide.introduction
+                            travelSpotTextView.text = guide.travelPlace.joinToString(", ")
+                            foodSpotTextView.text = guide.foodPlace.joinToString(", ")
+                            photoSpotTextView.text = guide.photoPlace.joinToString(", ")
 
                             Log.d("API_SUCCESS", "Data loaded successfully for guideId: $guideId")
                         } else {
-                            Log.e("DATA_ERROR", "Guide ID $guideId not found in region $regionId")
+                            Log.e("DATA_ERROR", "Guide ID $guideId not found in response data")
                         }
                     } else {
-                        Log.e("DATA_ERROR", "No guides found for region ID $regionId")
+                        Log.e("DATA_ERROR", "No guides found for region ID response")
                     }
                 } else {
                     Log.e("API_ERROR", "Response failed: ${response.code()} - ${response.message()}")

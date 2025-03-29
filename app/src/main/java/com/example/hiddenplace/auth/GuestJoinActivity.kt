@@ -7,15 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hiddenplace.R
 import com.example.hiddenplace.RetrofitClient
 import com.example.hiddenplace.guest.GuestMainActivity
-import com.example.hiddenplace.guide.OCRCheckActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class GuestJoinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +32,7 @@ class GuestJoinActivity : AppCompatActivity() {
         val btnJoin2 = findViewById<Button>(R.id.guestJoinAccept)
 
         btnJoin2.setOnClickListener {
-            val userId = etUserId2.text.toString()
+            val userAccountName = etUserId2.text.toString()
             val password = etPassword2.text.toString()
             val userName = etUserName2.text.toString()
             val phoneNumber = etPhoneNumber2.text.toString()
@@ -53,8 +52,8 @@ class GuestJoinActivity : AppCompatActivity() {
                 else -> false // 기본값은 false
             }
 
-            val joinModel = JoinModel(
-                userAccountName = userId,
+            val guestJoinModel = GuestJoinModel(
+                userAccountName = userAccountName,
                 password = password,
                 userName = userName,
                 phoneNumber = phoneNumber,
@@ -62,39 +61,58 @@ class GuestJoinActivity : AppCompatActivity() {
                 gender = gender,
                 email = email,
                 regionId = 0, // 기본값
-                isGuide = true // 가이드 회원가입이므로 true
+                guide = true, // 바꾸기
+                form = ""
             )
-            sendJoinRequest2(joinModel)
+            sendJoinRequest2(guestJoinModel)
         }
 
     }
 
-    private fun sendJoinRequest2(joinModel: JoinModel) {
-        val apiService = RetrofitClient.joinService
+    private fun sendJoinRequest2(guestJoinModel: GuestJoinModel) {
+        val apiService = RetrofitClient.guestJoinService
+        Log.d("GuestJoinActivity", "회원가입 요청 시작: $guestJoinModel") // 요청 데이터 로그 출력
 
-        apiService.JoinUser(joinModel).enqueue(object : Callback<JoinResponseModel> {
-            override fun onResponse(call: Call<JoinResponseModel>, response: Response<JoinResponseModel>) {
+        apiService.GuestJoinUser(guestJoinModel).enqueue(object : Callback<GuestJoinResponseModel> {
+            override fun onResponse(call: Call<GuestJoinResponseModel>, response: Response<GuestJoinResponseModel>) {
+                Log.d("GuestJoinActivity", "응답 코드: ${response.code()}")
+                Log.d("GuestJoinActivity", "응답 성공 여부: ${response.isSuccessful}")
                 if (response.isSuccessful) {
                     val responseData = response.body()
 
                     responseData?.let {
-                        Log.d("GuestJoinActivity", "회원가입 성공: userId=${it.userId}")
-                        Toast.makeText(this@GuestJoinActivity, "성공", Toast.LENGTH_SHORT).show()
+                        if (it.userId != null) {
+                            Log.d("GuestJoinActivity", "회원가입 성공: userId=${it.userId}")
+                            Toast.makeText(this@GuestJoinActivity, "성공", Toast.LENGTH_SHORT).show()
 
-                        // **회원가입 성공 후 페이지 이동**
-                        val intent = Intent(this@GuestJoinActivity, GuestMainActivity::class.java)
-                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(intent)
+                            // **회원가입 성공 후 페이지 이동**
+                            val intent = Intent(this@GuestJoinActivity, GuestMainActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            startActivity(intent)
+                        } else {
+                            // userId가 null인 경우 예외 처리
+                            Log.e("GuestJoinActivity", "서버 응답에 userId 없음")
+                            Toast.makeText(this@GuestJoinActivity, "회원가입 실패: userId 없음", Toast.LENGTH_SHORT).show()
+                        }
+                    } ?: run {
+                        // responseData가 null일 경우 예외 처리
+                        Log.e("GuestJoinActivity", "서버 응답이 null입니다.")
+                        Toast.makeText(this@GuestJoinActivity, "회원가입 실패: 응답 데이터 없음", Toast.LENGTH_SHORT).show()
                     }
 
                 } else {
-                    Toast.makeText(this@GuestJoinActivity, "실패", Toast.LENGTH_SHORT).show()
+                    val errorBody = response.errorBody()?.string() // 오류 응답 본문 읽기
+                    Log.e("GuestJoinActivity", "회원가입 실패! 응답 코드: ${response.code()}, 오류 내용: $errorBody")
+                    Toast.makeText(this@GuestJoinActivity, "실패: ${response.code()}", Toast.LENGTH_SHORT).show()
                 }
             }
 
-            override fun onFailure(call: Call<JoinResponseModel>, t: Throwable) {
+            override fun onFailure(call: Call<GuestJoinResponseModel>, t: Throwable) {
+                Log.e("GuestJoinActivity", "네트워크 오류: ${t.message}")
+                t.printStackTrace() // 오류의 자세한 스택 트레이스를 로그로 찍어봄
                 Toast.makeText(this@GuestJoinActivity, "서버 오류: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
 }
+

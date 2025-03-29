@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface GuideListService {
-    @GET("{regionId}") // {regionId}를 URL에 포함
+    @GET("/travelerPage/getRegionGuideList/{regionId}") // {regionId}를 URL에 포함
     fun getGuides(@Path("regionId") regionId: Int): Call<List<GuideListModel>>
 }
