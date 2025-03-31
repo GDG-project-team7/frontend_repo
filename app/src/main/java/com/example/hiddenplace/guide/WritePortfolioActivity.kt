@@ -45,7 +45,6 @@ class WritePortfolioActivity : AppCompatActivity() {
             val PhotoPlace = savePhotoPlace.text.toString()
 
             val savePortfolioModel = SavePortfolioModel(
-                id = userId,
                 title = Title,
                 introduction = Introduction,
                 travelPlace = TravelPlace,

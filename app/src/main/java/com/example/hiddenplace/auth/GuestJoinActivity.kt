@@ -61,8 +61,7 @@ class GuestJoinActivity : AppCompatActivity() {
                 gender = gender,
                 email = email,
                 regionId = 0, // 기본값
-                guide = true, // 바꾸기
-                form = ""
+                //guide = false, // 바꾸기
             )
             sendJoinRequest2(guestJoinModel)
         }

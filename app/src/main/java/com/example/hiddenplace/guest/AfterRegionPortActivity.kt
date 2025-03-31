@@ -60,18 +60,16 @@ class AfterRegionPortActivity : AppCompatActivity() {
 
         // regionId를 전달하여 API 호출
         RetrofitClient.afterRegionPortService.getPortfolio(guideId).enqueue(object :
-            Callback<List<AfterRegionPortmodel>> {
+            Callback<AfterRegionPortmodel> {
             override fun onResponse(
-                call: Call<List<AfterRegionPortmodel>>,
-                response: Response<List<AfterRegionPortmodel>>
+                call: Call<AfterRegionPortmodel>,
+                response: Response<AfterRegionPortmodel>
             ) {
-                if (response.isSuccessful) {
-                    val regionGuides = response.body()
-                    Log.d("API_SUCCESS", "Response received: $regionGuides")
+                Log.d("API_RESPONSE", "Response Code: ${response.code()}, Message: ${response.message()}")
 
-                    if (!regionGuides.isNullOrEmpty()) {
-                        // 특정 `id`에 해당하는 가이드 찾기
-                        val guide = regionGuides.find { it.id == guideId }
+                if (response.isSuccessful) {
+                    val guide = response.body()
+                    Log.d("API_SUCCESS", "Response received: $guide")
 
                         if (guide != null) {
                             Log.d("DATA_FOUND", "Guide found: ${guide.userName}")
@@ -79,23 +77,20 @@ class AfterRegionPortActivity : AppCompatActivity() {
                             userNameTextView.text = guide.userName
                             mainTextView.text = guide.title
                             profileTextView.text = guide.introduction
-                            travelSpotTextView.text = guide.travelPlace.joinToString(", ")
-                            foodSpotTextView.text = guide.foodPlace.joinToString(", ")
-                            photoSpotTextView.text = guide.photoPlace.joinToString(", ")
+                            travelSpotTextView.text = guide.travelPlace
+                            foodSpotTextView.text = guide.foodPlace
+                            photoSpotTextView.text = guide.photoPlace
 
                             Log.d("API_SUCCESS", "Data loaded successfully for guideId: $guideId")
                         } else {
-                            Log.e("DATA_ERROR", "Guide ID $guideId not found in response data")
+                            Log.e("DATA_ERROR", "Guide data is null")
                         }
-                    } else {
-                        Log.e("DATA_ERROR", "No guides found for region ID response")
-                    }
                 } else {
                     Log.e("API_ERROR", "Response failed: ${response.code()} - ${response.message()}")
                 }
             }
 
-            override fun onFailure(call: Call<List<AfterRegionPortmodel>>, t: Throwable) {
+            override fun onFailure(call: Call<AfterRegionPortmodel>, t: Throwable) {
                 Log.e("API_FAILURE", "API request failed: ${t.message}", t)
                 Toast.makeText(this@AfterRegionPortActivity, "데이터 로딩 실패", Toast.LENGTH_SHORT).show()
             }

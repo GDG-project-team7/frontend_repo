@@ -5,8 +5,8 @@ data class AfterRegionPortmodel(
     val userName: String,
     val title: String,
     val introduction: String,
-    val travelPlace: List<String>,
-    val foodPlace: List<String>,
-    val photoPlace: List<String>,
+    val travelPlace: String,
+    val foodPlace: String,
+    val photoPlace: String,
     // val regionId: Int
 )

@@ -53,7 +53,7 @@ class GuideJoinActivity : AppCompatActivity() {
 
             // 지역 선택 -> 1
             val regionId  = when (rgRegion1.checkedRadioButtonId) {
-                R.id.rbRegion1 -> 1  // 남성 선택 시 true
+                R.id.rbRegion1 -> 2  // 남성 선택 시 true
                 else -> 0 // 기본값은 false
             }
 

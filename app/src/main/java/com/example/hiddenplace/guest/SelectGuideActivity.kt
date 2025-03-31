@@ -31,7 +31,17 @@ class SelectGuideActivity : AppCompatActivity()  {
         adapter = GuideListAdapter { guide ->
             Log.d("CLICK_EVENT", "Guide clicked: ID=${guide.userId}, Name=${guide.userName}, Region=${guide.regionId}")
             val intent = Intent(this, AfterRegionPortActivity::class.java)
-            intent.putExtra("GUIDE_ID", guide.userId)  // 올바른 키 설정
+
+            // userId가 Int 범위를 초과하는지 확인 후 변환
+            if (guide.userId in Int.MIN_VALUE.toLong()..Int.MAX_VALUE.toLong()) {
+                intent.putExtra("GUIDE_ID", guide.userId.toInt())
+            } else {
+                Log.e("DATA_ERROR", "userId 값이 Int 범위를 초과함: ${guide.userId}")
+                Toast.makeText(this, "GUIDE_ID 변환 오류", Toast.LENGTH_SHORT).show()
+                return@GuideListAdapter
+            }
+
+            //intent.putExtra("GUIDE_ID", guide.userId)  // 올바른 키 설정
             intent.putExtra("USER_NAME", guide.userName)
             intent.putExtra("REGION_ID", guide.regionId) // 지역 정보 전달
             startActivity(intent)

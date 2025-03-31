@@ -9,6 +9,4 @@ data class GuestJoinModel(
     val gender: Boolean,
     val email: String,
     val regionId: Int,
-    val guide: Boolean,
-    val form: String,
 )

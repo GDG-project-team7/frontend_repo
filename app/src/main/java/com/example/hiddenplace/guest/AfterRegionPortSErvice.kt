@@ -6,5 +6,5 @@ import retrofit2.http.Path
 
 interface AfterRegionPortService {
     @GET("/travelerPage/getPortfolio/{guideId}")
-    fun getPortfolio(@Path("guideId") guideId: Int): Call<List<AfterRegionPortmodel>>
+    fun getPortfolio(@Path("guideId") guideId: Int): Call<AfterRegionPortmodel>
 }
