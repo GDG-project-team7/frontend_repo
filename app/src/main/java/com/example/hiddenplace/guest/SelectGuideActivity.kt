@@ -21,10 +21,17 @@ class SelectGuideActivity : AppCompatActivity()  {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: GuideListAdapter
+    private var travelerId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_guide)
+
+        // travelerId 받기
+        travelerId = intent.getIntExtra("TRAVELER_ID", 0)
+
+        // travelerId 로그 출력
+        Log.d("TRAVELER_ID", "Received travelerId: $travelerId")
 
         recyclerView = findViewById(R.id.GuideListRV)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -44,6 +51,7 @@ class SelectGuideActivity : AppCompatActivity()  {
             //intent.putExtra("GUIDE_ID", guide.userId)  // 올바른 키 설정
             intent.putExtra("USER_NAME", guide.userName)
             intent.putExtra("REGION_ID", guide.regionId) // 지역 정보 전달
+            intent.putExtra("TRAVELER_ID", travelerId) // travelerId 전달
             startActivity(intent)
         }
         recyclerView.adapter = adapter

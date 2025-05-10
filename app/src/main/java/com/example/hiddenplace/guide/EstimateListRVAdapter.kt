@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hiddenplace.databinding.EstimateListItemBinding
+import com.example.hiddenplace.guest.NumToRegion
 
 class EstimateListRVAdapter(
     private val estimateItems: List<Estimate>,
@@ -17,8 +18,10 @@ class EstimateListRVAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(estimate: Estimate) {
-            binding.UserName.text = estimate.user.userName
-            binding.RegionId.text = estimate.user.regionId.toString()
+            binding.UserName.text = estimate.traveler.userName
+            // regionId를 한글로 변환하여 표시
+            val regionName = NumToRegion.getRegionName(estimate.traveler.regionId)
+            binding.RegionId.text = regionName
 
             // 아이템 클릭 이벤트
             binding.root.setOnClickListener {

@@ -13,10 +13,15 @@ import com.example.hiddenplace.R
 import com.example.hiddenplace.guide.CheckPortfolioActivity
 
 class GuestMainActivity : AppCompatActivity() {
+    private var travelerId: Int = 0  // travelerId 변수 추가
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_guest_main)
+
+        // 이전 페이지에서 전달된 travelerId 받기
+        travelerId = intent.getIntExtra("TRAVELER_ID", 0)
 
         // 작성한 견적서 보기 버튼 클릭 이벤트
         val lookRequestBtn: Button = findViewById(R.id.lookRequestBtn)
@@ -30,6 +35,7 @@ class GuestMainActivity : AppCompatActivity() {
 
         findGuideBtn.setOnClickListener {
             val intent = Intent(this, RegionSelectActivity::class.java)
+            intent.putExtra("TRAVELER_ID", travelerId)  // travelerId 전달
             startActivity(intent) // 액티비티 시작
 
 

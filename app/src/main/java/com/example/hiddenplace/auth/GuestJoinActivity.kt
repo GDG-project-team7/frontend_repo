@@ -81,12 +81,14 @@ class GuestJoinActivity : AppCompatActivity() {
 
                     responseData?.let {
                         if (it.userId != null) {
-                            Log.d("GuestJoinActivity", "회원가입 성공: userId=${it.userId}")
+                            val travelerId = it.userId.toInt()
+                            Log.d("GuestJoinActivity", "회원가입 성공: userId=$travelerId")
                             Toast.makeText(this@GuestJoinActivity, "성공", Toast.LENGTH_SHORT).show()
 
                             // **회원가입 성공 후 페이지 이동**
                             val intent = Intent(this@GuestJoinActivity, GuestMainActivity::class.java)
                             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            intent.putExtra("TRAVELER_ID", travelerId)  // travelerId 전달
                             startActivity(intent)
                         } else {
                             // userId가 null인 경우 예외 처리

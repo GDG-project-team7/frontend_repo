@@ -3,6 +3,7 @@ package com.example.hiddenplace
 import com.example.hiddenplace.auth.GuestJoinService
 import com.example.hiddenplace.auth.GuideJoinService
 import com.example.hiddenplace.guest.AfterRegionPortService
+import com.example.hiddenplace.guest.EstimateService
 import com.example.hiddenplace.guest.GuideListService
 import com.example.hiddenplace.guide.EstimateListService
 import com.example.hiddenplace.guide.SavePortfolioService
@@ -23,15 +24,6 @@ object RetrofitClient {
         .addInterceptor(loggingInterceptor)
         .build()
 
-
-    val instance: EstimateListService by lazy {
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(client)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(EstimateListService::class.java)
-    }
 
     val joinService: GuideJoinService by lazy {
         Retrofit.Builder()
@@ -74,6 +66,25 @@ object RetrofitClient {
             .build()
             .create(SavePortfolioService::class.java)
     }
+
+    val estimateService: EstimateService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(EstimateService::class.java)
+    }
+
+    val estimateListService: EstimateListService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(EstimateListService::class.java)
+    }
+
 
 
 

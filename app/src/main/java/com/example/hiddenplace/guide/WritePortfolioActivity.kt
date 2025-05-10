@@ -76,7 +76,9 @@ class WritePortfolioActivity : AppCompatActivity() {
                         Toast.makeText(this@WritePortfolioActivity, "성공", Toast.LENGTH_SHORT).show()
 
                         // **회원가입 성공 후 페이지 이동**
-                        val intent = Intent(this@WritePortfolioActivity, GuideMainActivity::class.java)
+                        val intent = Intent(this@WritePortfolioActivity, GuideMainActivity::class.java).apply {
+                            putExtra("userId", userId)  // userId를 담아서 전달
+                        }
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
                     }

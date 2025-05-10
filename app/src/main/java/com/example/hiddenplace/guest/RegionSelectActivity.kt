@@ -10,9 +10,15 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.hiddenplace.R
 
 class RegionSelectActivity : AppCompatActivity() {
+
+    private var travelerId: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_region_select)
+
+        // 이전 페이지에서 전달된 travelerId 받기
+        travelerId = intent.getIntExtra("TRAVELER_ID", 0)
 
         // 지역별 regionId 매핑
         val regionMap = mapOf(
@@ -36,6 +42,8 @@ class RegionSelectActivity : AppCompatActivity() {
     private fun navigateToGuideList(regionId: Int) {
         val intent = Intent(this, SelectGuideActivity::class.java).apply {
             putExtra("regionId", regionId)
+            putExtra("TRAVELER_ID", travelerId)  // travelerId도 함께 전달
+
         }
         startActivity(intent)
     }

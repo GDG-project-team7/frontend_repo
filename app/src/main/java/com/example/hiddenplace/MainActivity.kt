@@ -68,6 +68,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent) // 액티비티 시작
         }
 
+        //로그인 기능이 없는 관계로, guideId=40인 가이드로 로그인함을 가정, 가이드찾기 버튼 클릭하면 가이드 메인 페이지 이동
+        val findguidebtn = findViewById<Button>(R.id.findguide) // 버튼 ID 가져오기
+
+        findguidebtn.setOnClickListener {
+            val intent = Intent(this, GuideMainActivity::class.java)
+            startActivity(intent) // 액티비티 시작
+        }
+
 
 
     }

@@ -16,10 +16,16 @@ class EstimateListActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: EstimateListRVAdapter
 
+    private var guideId: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estimate_list)
 
+        // guideId를 임시로 40으로 설정
+        //guideId = 40
+        //Log.d("EstimateListActivity", "Testing with guideId: $guideId")
+        guideId = intent.getIntExtra("GUIDE_ID",0)
         recyclerView = findViewById(R.id.estimatelistRV)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -28,10 +34,11 @@ class EstimateListActivity : AppCompatActivity() {
     }
 
     private fun fetchDataFromServer() {
-        RetrofitClient.instance.getEstimates().enqueue(object : Callback<List<Estimate>> {
+        RetrofitClient.estimateListService.getEstimates(guideId).enqueue(object : Callback<List<Estimate>> {
             override fun onResponse(call: Call<List<Estimate>>, response: Response<List<Estimate>>) {
                 if (response.isSuccessful) {
                     val estimateItems = response.body() ?: emptyList()
+                    Log.d("EstimateListActivity", "Received Estimates: $estimateItems")
                     setupRecyclerView(estimateItems)
                 } else {
                     Log.e("API_ERROR", "Response Error: ${response.code()}")
@@ -47,11 +54,12 @@ class EstimateListActivity : AppCompatActivity() {
     private fun setupRecyclerView(estimateItems: List<Estimate>) {
         adapter = EstimateListRVAdapter(estimateItems) { estimateItem ->
             val intent = Intent(this, EstimateCheckActivity::class.java).apply {
-                putExtra("userName", estimateItem.user.userName) // user 객체에서 가져오기
-                putExtra("regionId", estimateItem.user.regionId)
+                putExtra("userName", estimateItem.traveler.userName) // traveler 객체에서 가져오기
+                putExtra("regionId", estimateItem.traveler.regionId)
                 putExtra("age", estimateItem.age)
                 putExtra("gender", estimateItem.gender)
-                putExtra("text", estimateItem.text)
+                putExtra("text", estimateItem.requestText)
+                putExtra("IS_ACCEPTED", estimateItem.isAccepted)
             }
             startActivity(intent)
         }

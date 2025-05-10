@@ -26,6 +26,8 @@ class AfterRegionPortActivity : AppCompatActivity() {
     private lateinit var foodSpotTextView: TextView
     private lateinit var photoSpotTextView: TextView
 
+    private var travelerId: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_after_region_port)
@@ -41,7 +43,10 @@ class AfterRegionPortActivity : AppCompatActivity() {
         // Intent에서 `regionId`와 `id` 값을 가져옴
         //val regionId = intent.getIntExtra("REGION_ID", 0)
         val guideId = intent.getIntExtra("GUIDE_ID", 0)  // 특정 가이드의 id
+        travelerId = intent.getIntExtra("TRAVELER_ID",0)
 
+        // travelerId 로그 출력
+        Log.d("TRAVELER_ID", "Received travelerId: $travelerId")
 
         Log.d("INTENT_DATA", "Received: GUIDE_ID=$guideId")
         // API 요청하여 데이터 가져오기
@@ -50,7 +55,10 @@ class AfterRegionPortActivity : AppCompatActivity() {
         // 가이드 포트폴리오 확인 후 견적서 작성 페이지로 넘어가는 버튼 클릭이벤트
         val WriteEstimateBtn : Button = findViewById(R.id.WriteEstimateBtn)
         WriteEstimateBtn.setOnClickListener{
-            val intent = Intent(this, EstimateWriteActivity::class.java)
+            val intent = Intent(this, EstimateWriteActivity::class.java).apply {
+                putExtra("GUIDE_ID", guideId)
+                putExtra("TRAVELER_ID", travelerId)
+            }
             startActivity(intent)
         }
     }
@@ -86,7 +94,9 @@ class AfterRegionPortActivity : AppCompatActivity() {
                             Log.e("DATA_ERROR", "Guide data is null")
                         }
                 } else {
-                    Log.e("API_ERROR", "Response failed: ${response.code()} - ${response.message()}")
+                    val errorBody = response.errorBody()?.string() ?: "No error body"
+                    Log.e("API_ERROR", "Response failed: ${response.code()} - $errorBody")
+                    Toast.makeText(this@AfterRegionPortActivity, "서버 에러: $errorBody", Toast.LENGTH_SHORT).show()
                 }
             }
 
